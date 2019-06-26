@@ -7,6 +7,7 @@ use App\Models\Anggaran;
 use App\Models\User;
 use App\Models\Unit;
 use App\Models\Coa;
+use Carbon\Carbon;
 use Bitfumes\Multiauth\Model\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -101,7 +102,7 @@ class AdminController extends Controller
     public function editAnggaran(Request $request) {
             Anggaran::where('id_anggaran', $request->id_anggaran)->update([
         'keterangan'=> $request->keterangan,
-
+        'invoice' => $request->invoice,
         'progress'=> $request->progress,
         'tanggal_progress'=>now()
       ]);
@@ -121,8 +122,8 @@ class AdminController extends Controller
       $idadmin=auth('admin')->user()->id;
         Anggaran::where('id_anggaran', $request->id_anggaran)->update([
         'id_admin'=> $idadmin,
-        'progress'=>'Validasi',
-        'tanggal_progress'=>now()
+        'progress'=>'Input',
+        'tanggal_progress'=>Carbon::now('UTC')
       ]);
       return redirect()->back();
     }

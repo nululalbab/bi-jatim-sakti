@@ -41,20 +41,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nomor invoice') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="invoice" type="text" class="form-control @error('Nomor invoice') is-invalid @enderror" name="invoice" value="{{ old('invoice') }}" required autocomplete="invoice" autofocus>
-
-                                @error('invoice')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="perihal" class="col-md-4 col-form-label text-md-right">{{ __('Perihal') }}</label>
 
                             <div class="col-md-6">
@@ -67,6 +53,10 @@
                                 @enderror
                             </div>
                         </div>
+
+
+
+                        
 
                         <div class="form-group row">
                             <label for="jumlah" class="col-md-4 col-form-label text-md-right">{{ __('Jumlah') }}</label>

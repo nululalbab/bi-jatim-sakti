@@ -25,10 +25,10 @@
                         No Dokumen
                       </th>
                       <th>
-                        No Invoice
+                        Perihal
                       </th>
                       <th>
-                        Perihal
+                        No Invoice
                       </th>
                       <th>
                         Progress
@@ -66,11 +66,12 @@
                           {{$anggaran->dokumen}}
                         </td>
                         <td>
-                          {{$anggaran->invoice}}
-                        </td>
-                        <td>
                           {{$anggaran->perihal}}
                         </td>
+                        <td>
+                          {{$anggaran->invoice}}
+                        </td>
+                        
                         <td>
                           @if ($anggaran->progress==null)
                               <button class="btn btn-block btn-sm btn-gradient-primary">Belum Diproses</button>

@@ -7,7 +7,7 @@
                   <div class="card-body">
                   <div class="template-demo">
                     <h1 class="display-1">Jatim Sakti</h1>
-                    <p>Jatim Sakti merupakan aplikasi monitorin dan tracking anggaran yang digunakan pada unit kerja di Bank Indonesia KPW Jatim </p>
+                    <p>Jatim Sakti merupakan aplikasi monitoring dan tracking anggaran yang digunakan pada unit kerja di Bank Indonesia KPW Jatim </p>
                   </div>
                 </div>
                   </div>

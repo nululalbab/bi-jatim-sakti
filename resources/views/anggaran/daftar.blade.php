@@ -48,6 +48,9 @@
                           <th>
                             Keterangan
                           </th>
+                          <th>
+                            Pembatalan
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -66,10 +69,10 @@
                               {{$anggaran->dokumen}}
                             </td>
                             <td>
-                              {{$anggaran->invoice}}
+                              {{$anggaran->perihal}}
                             </td>
                             <td>
-                              {{$anggaran->perihal}}
+                              {{$anggaran->invoice}}
                             </td>
                             <td>
                               @if ($anggaran->progress==null)
@@ -95,6 +98,12 @@
                             </td>
                             <td>
                             {{$anggaran->keterangan}}
+                            </td>
+                            <td>
+                              @if ($anggaran->progress=="Done")
+                                  @else <a href="{{ route('batalkan.anggaran',$anggaran->id_anggaran) }}"><button class="btn btn-block btn-sm btn-gradient-primary">Batalkan</button></a>
+                              @endif
+                                
                             </td>
 
                           </tr>

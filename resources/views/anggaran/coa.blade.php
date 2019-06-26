@@ -5,9 +5,9 @@
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Daftar Pengajuan Anggaran</h4>
+                    <h4 class="card-title">Daftar COA Anggaran</h4>
                     <p class="card-description">
-                      Data tabel pengajuan yang diajukan ke departemen SLA
+                      Data tabel COA
                     </p>
                     <table id="tabeldaftar" class="table display nowrap" style="width:100%">
                       <thead>

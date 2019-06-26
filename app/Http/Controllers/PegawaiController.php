@@ -58,7 +58,7 @@ class PegawaiController extends Controller
 
       $totalAnggaran = Anggaran::with('user')
       ->whereHas('user',function ($query) use ($id){
-        $query->where('id_unit',$id)->where('progress',"Settlement");
+        $query->where('id_unit',$id)->where('progress',"Done");
       })->sum('jumlah');
 
       $data = array(
@@ -171,6 +171,28 @@ class PegawaiController extends Controller
 		$file = $request->file('file');
 
 
-	}
+  }
+  
+  public function batalkanAnggaran($id) {
+            Anggaran::where('id_anggaran', $id)->update([
+        'keterangan'=> "Dibatalkan",
+        
+        'progress'=> "Batal",
+        'jumlah'=> 0,
+        'tanggal_progress'=>now()
+      ]);
+
+      $user = User::all();
+      $unit = Unit::all();
+      $anggaran = Anggaran::where('id_user',Auth::user()->id)->get();
+      $totalAnggaran = Anggaran::where('id_user',Auth::user()->id)->sum('jumlah');
+      $data = array(
+        'user' => $user,
+        'unit' => $unit,
+        'anggaran' => $anggaran,
+        'totalAnggaran' => $totalAnggaran
+      );
+        return view('anggaran.daftar')->with($data);
+    }
 
 }

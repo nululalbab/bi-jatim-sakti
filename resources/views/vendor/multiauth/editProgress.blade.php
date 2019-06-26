@@ -21,10 +21,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">No Invoice</label>
+                            <label for="Keterangan" class="col-md-4 col-form-label text-md-right">{{ __('No Invoice') }}</label>
 
                             <div class="col-md-6">
-                                <h4 for="name" class="col-md-8  text-md-right">{{$anggaran[0]->invoice}}</h4>
+                                <input id="invoice" type="text" class="form-control @error('invoice') is-invalid @enderror" name="invoice" value="{{$anggaran[0]->invoice}}" required autocomplete="invoice" autofocus>
+
+                                @error('invoice')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 
@@ -41,9 +47,8 @@
 
                             <div class="col-md-6 ">
                                 <select class="form-control form-control-sm" name="progress" form="editProgress">
-                                  <option value="Approval">Approval</option>
-                                  <option value="Validasi">Validasi</option>
-                                  <option value="Settlement">Settlement</option>
+                                  <option value="Progress">Progress</option>
+                                  <option value="Done">Done</option>
                                   <option value="Cancel">Cancel</option>
                                   <option value="Reject">Reject</option>
                                 </select>

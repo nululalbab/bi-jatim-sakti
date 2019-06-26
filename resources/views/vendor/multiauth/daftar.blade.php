@@ -27,10 +27,10 @@
                     No Dokumen
                   </th>
                   <th>
-                    No Invoice
+                    Perihal
                   </th>
                   <th>
-                    Perihal
+                    No Invoice
                   </th>
                   <th>
                     Progress
@@ -71,10 +71,10 @@
                       {{$anggaran->dokumen}}
                     </td>
                     <td>
-                      {{$anggaran->invoice}}
+                      {{$anggaran->perihal}}
                     </td>
                     <td>
-                      {{$anggaran->perihal}}
+                      {{$anggaran->invoice}}
                     </td>
                     <td>
                       @if ($anggaran->progress==null)

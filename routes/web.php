@@ -33,3 +33,5 @@ Route::get('coa','PegawaiController@showCoa')->name('coa.anggaran');
 Route::get('autocomplete', 'PegawaiController@search');
 Route::get('coa/{id}', 'PegawaiController@showSisaCoa')->name('coa.sisa.anggaran');
 
+Route::get('batalkan/{id}', 'PegawaiController@batalkanAnggaran')->name('batalkan.anggaran');
+

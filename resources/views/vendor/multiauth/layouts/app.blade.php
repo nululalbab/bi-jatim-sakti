@@ -147,7 +147,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.daftar.anggaran') }}">Anggaran Masuk</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.progress.anggaran') }}">Proses Anggaran</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{ route('admin.pencairan.anggaran') }}">Pencairan Anggaran</a></li>
+                
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.coa.anggaran') }}">Daftar COA</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ route('admin.tambah.coa') }}">Tambah COA</a></li>
               </ul>
