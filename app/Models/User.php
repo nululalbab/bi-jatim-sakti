@@ -8,7 +8,12 @@
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
-use Illuminate\Auth\Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+
+
 
 /**
  * Class User
@@ -27,8 +32,10 @@ use Illuminate\Auth\Authenticatable;
  *
  * @package App\Models
  */
-class User extends Eloquent
+class User extends Authenticatable implements MustVerifyEmail
 {
+
+	 
 	protected $casts = [
 		'id_unit' => 'int'
 	];

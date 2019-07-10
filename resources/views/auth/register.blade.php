@@ -45,8 +45,12 @@
 
                             <div class="col-md-6">
                               <select id="unit" name="unit" class="form-control">
-                                <option value="1">OJK</option>
-                                <option value="2">Humas</option>
+                                <option value="1">FDSEK</option>
+                                <option value="2">FAES</option>
+                                <option value="3">FPPPU</option>
+                                <option value="4">FKKK</option>
+                                <option value="5">SLA</option>
+                                <option value="6">SPPUR</option>
                             </select>
 
                           </div>
