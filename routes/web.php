@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes(['verify' => true]);
-  
+Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Fitur Pengajuan Anggaran

@@ -24,7 +24,7 @@ class PegawaiController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth','verified']);
+        $this->middleware('auth');
     }
 
     /**
@@ -145,12 +145,6 @@ class PegawaiController extends Controller
 
 
     public function createFormAnggaran(Request $request) {
-
-
-
-      return redirect()->back();
-
-      
           Anggaran::create([
         'id_user' => Auth::user()->id,
         'perihal' => $request->perihal,
